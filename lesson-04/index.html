@@ -1,0 +1,199 @@
+<!-- <HTML_TAG_NAME ATTRIBUTE="VALUE">CONTENT</HTML_TAG_NAME> -->
+
+<html>
+	<!-- < ! -- comment -- > -->
+	<!-- meta data, for browser and search engines, html parser -->
+	<head>
+		<meta charset="utf-8" />
+		<title>Turbo.az - BMW X5</title>
+		<!-- font ligature -->
+		<!-- SEO => Search Engine Optimiztion -->
+		<!-- desc leng => [128, 256] -->
+		<meta
+			name="description"
+			content="BMW X5 - Polat Alemdarin Surduyu masin, Cakir"
+		/>
+		<!-- <style></style> -->
+		<!-- <link rel="stylesheet" href="style.css" /> -->
+		<!-- <script></script> -->
+	</head>
+	<body>
+		<!-- typography -->
+		<div>
+			<!-- headings -->
+			<!-- block elements -->
+			<h1>HELLO WORLD!</h1>
+			<h2>HELLO WORLD!</h2>
+			<h3>HELLO WORLD!</h3>
+			<h4>HELLO WORLD!</h4>
+			<h5>HELLO WORLD!</h5>
+			<h6>HELLO WORLD!</h6>
+			<!-- text -->
+			<p>this is paragraph</p>
+
+			<!-- inline element -->
+			<span>this is span</span>
+			<!-- <b>this is bold</b> -->
+			<strong>this is strong</strong>
+			<i>this is italic</i>
+			<em>this is emphasized</em>
+			<small>this is small</small>
+			<mark>this is mark</mark>
+			<del>this is deleted</del>
+			<ins>this is inserted</ins>
+			<u>this is underline</u>
+			<sub>this is subscript</sub>
+			<sup>this is superscript</sup>
+			<!-- block element -->
+			<p>
+				Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Quasi
+				quisquam recusandae <b>dicta</b> <strong>accusamus</strong> reiciendis
+				exercitationem voluptate distinctio nihil ex, provident corporis ipsam aut
+				sed ut unde! Veritatis quia officiis repellat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Quasi
+				quisquam recusandae <b>dicta</b> <strong>accusamus</strong> reiciendis
+				exercitationem voluptate distinctio nihil ex, provident corporis ipsam aut
+				sed ut unde! Veritatis quia officiis repellat.
+			</p>
+		</div>
+
+		<!-- form -->
+		<form>
+			<input type="text" required name="name" placeholder="Name" />
+			<input type="text" name="custom" placeholder="Custom" pattern="\d{4}" />
+			<input type="email" name="email" placeholder="Email" />
+			<input type="password" name="password" placeholder="Password" />
+			<input type="number" min="0" max="10" name="age" placeholder="Age" />
+			<input type="tel" name="phone" placeholder="Phone" />
+			<input type="url" name="website" placeholder="Website" />
+			<input type="search" name="search" placeholder="Search" />
+			<input type="color" name="color" placeholder="Color" />
+
+			<input type="date" name="date" placeholder="Date" />
+			<input type="time" name="time" placeholder="Time" />
+			<input type="datetime-local" name="datetime" placeholder="Datetime" />
+			<input type="month" name="month" placeholder="Month" />
+			<input type="week" name="week" placeholder="Week" />
+
+			<input
+				type="range"
+				name="range"
+				max="10"
+				min="0"
+				step="5"
+				placeholder="Range"
+			/>
+
+			<input type="file" name="file" placeholder="File" />
+			<input type="image" name="image" placeholder="Image" />
+
+			<br />
+
+			<!-- self closing tag -->
+			<input type="submit" />
+			<!-- manual closing tag -->
+			<button type="submit">Submit</button>
+
+			<input type="reset" name="reset" placeholder="Reset" />
+			<!-- OLMAZ: <input type="reset" name="reset" placeholder="Reset">sdfsf</input> -->
+			<button type="reset">Reset</button>
+			<!-- OLMAZ: <button type="reset" /> -->
+
+			<input type="button" name="button" value="Button" placeholder="Button" />
+			<button type="button">Button</button>
+
+			<br />
+
+			<input type="checkbox" name="checkbox" />
+			<input type="checkbox" name="checkbox" />
+			<input type="checkbox" name="checkbox" />
+
+			<br />
+
+			<p>
+				<label for="male"> Male: </label>
+				<input id="male" type="radio" value="male" name="gender" />
+			</p>
+			<p>
+				<label for="female"> Female: </label>
+				<input id="female" type="radio" value="female" name="gender" />
+			</p>
+			<p>
+				<label for="other"> Other </label>
+				<input id="other" type="radio" name="gender" value="other" />
+			</p>
+			<p>
+				<label for="salam"> Salam </label>
+				<input id="salam" type="radio" name="salam" />
+			</p>
+
+			<input type="hidden" name="token" value="Bearer sjdghfjhsdgfjhdsgfjhsd" />
+
+			<select name="cars">
+				<option value="audi">Audi</option>
+				<option value="bmw" selected>BMW</option>
+				<option value="mercedes">Mercedes</option>
+			</select>
+
+			<textarea name="message" cols="30" rows="10"></textarea>
+		</form>
+
+		<!-- lists -->
+		<div>
+			<!-- ordered list -->
+			<ol type="A" start="3">
+				<!-- list item -->
+				<li>BMW X5</li>
+				<li>BMW X6</li>
+				<li>BMW X7</li>
+			</ol>
+			<!-- unordered list -->
+			<ul>
+				<li>BMW X5</li>
+				<li>BMW X6</li>
+				<li>BMW X7</li>
+			</ul>
+			<!-- description list -->
+			<dl>
+				<dt>BMW X5</dt>
+				<dd>BMW X5 - Polat Alemdarin Surduyu masin</dd>
+				<dt>BMW X6</dt>
+				<dd>BMW X6 - Polat Alemdarin Surduyu masin</dd>
+				<dt>BMW X7</dt>
+				<dd>BMW X7 - Polat Alemdarin Surduyu masin</dd>
+			</dl>
+		</div>
+
+		<figure>
+			<picture>
+				<!-- <source
+					srcset="
+						https://static.semrush.com/blog/uploads/media/cc/85/cc85d452a743e27f68d426df35e4da7d/EN-Semantic-Search-Non-Semantic.psd
+					"
+					media="(min-width: 600px)"
+				/> -->
+				<source
+					srcset="
+						https://static.semrush.com/blog/uploads/media/cc/85/cc85d452a743e27f68d426df35e4da7d/EN-Semantic-Search-Non-Semantic.psd
+					"
+					media="(min-width: 300px)"
+					type="image/psd"
+				/>
+				<source
+					srcset="
+						https://static.semrush.com/blog/uploads/media/cc/85/cc85d452a743e27f68d426df35e4da7d/EN-Semantic-Search-Non-Semantic.jpg
+					"
+					media="(min-width: 300px)"
+					type="image/webp"
+				/>
+				<img
+					src="https://static.semrush.com/blog/uploads/media/cc/85/cc85d452a743e27f68d426df35e4da7d/EN-Semantic-Search-Non-Semantic.webp"
+					alt="semantic html image"
+				/>
+			</picture>
+			<figcaption>semantic html image</figcaption>
+		</figure>
+	</body>
+</html>
