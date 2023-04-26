@@ -1,0 +1,99 @@
+html {
+	font-family: sans-serif;
+}
+
+span {
+	color: rgb(178, 42, 236);
+}
+
+/* header {
+	background-color: red;
+} */
+
+.header {
+	background-color: rgb(58, 12, 212);
+}
+
+.card {
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	margin-bottom: 20px;
+	width: 200px;
+	height: 200px;
+}
+
+.card > h3 {
+	font-size: 30px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.card > p {
+	font-size: 20px;
+	margin: 0;
+}
+
+.card > p > span {
+	color: brown;
+	font-weight: 700;
+}
+
+[title] {
+	/* color: rgb(0, 255, 0); */
+	text-decoration: line-through;
+}
+
+/* [class] {
+	background-color: blue;
+} */
+/* .card {
+	background-color: azure;
+} */
+
+[data-status='success'] {
+	background-color: green;
+}
+[data-status='fail'] {
+	background-color: orangered;
+}
+[data-status='progress'] {
+	background-color: orange;
+}
+
+input[type='number'] {
+	background-color: rgb(0, 255, 255);
+	color: rgb(178, 42, 236);
+}
+
+input[type='number']::placeholder {
+	color: rgb(234, 43, 129);
+}
+
+.card {
+	position: relative;
+}
+
+.card::after {
+	content: 'after';
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.card::before {
+	content: 'before';
+	position: absolute;
+	left: 10px;
+	top: -10px;
+}
+
+a:active {
+	background-color: green;
+	color: aqua;
+}
+
+button:disabled {
+	background-color: rgb(255, 0, 0);
+}
