@@ -1,0 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap'); */
+/* @import url('./Roboto/font.css'); */
+
+:root {
+	font-size: 18px;
+	/* font-size: 48px; */
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+
+	font-family: 'Roboto', sans-serif;
+
+	/* background-color: blueviolet;
+	background-image: url('./33512134030_9184a16386_k.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-position: center;
+	background-position-x: center;
+	background-position-y: center; */
+
+	/* background-position-x: 0px;
+  background-position-y: 0px;
+
+  background-position-x: 20px;
+  background-position-y: 0px;
+
+  background-position-x: 40px;
+  background-position-y: 0px; */
+
+	/* background: red url('./33512134030_9184a16386_k.jpg') no-repeat center center /
+		cover; */
+
+	background-color: aqua;
+	color: rgb(50, 50, 50);
+
+	/* background-image: linear-gradient(45deg, red, violet); */
+
+	background-image: radial-gradient(circle at 50% 50%, violet, rgb(0 0 0 / 0));
+	/* transparent */
+
+	/* background-image: conic-gradient(
+		from 0deg,
+		red,
+		orange,
+		yellow,
+		green,
+		blue,
+		indigo,
+		violet,
+		red
+	); */
+}
+
+.title {
+	background-color: currentColor;
+	color: white;
+	color: #fefefe;
+	color: rgb(255, 255, 255);
+	color: rgba(0, 0, 0, 0.5);
+	color: rgb(0 0 0 / 0.5);
+	color: hsl(0, 0%, 0%);
+	color: hsla(0, 0%, 0%, 0.5);
+	color: hsl(0 0% 0% / 0.5);
+
+	border: 3px solid rgb(255, 255, 255);
+	border-color: blueviolet;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 400;
+	font-style: italic;
+	/* font-family: 'Roboto', sans-serif; */
+}
+
+/*
+rgb
+red green blue
+0-255, 0-255, 0-255
+00-ff, 00-ff, 00-ff
+
+rgb(255, 255, 255)
+#ffffff
+
+hsl
+hue saturation lightness
+
+P3 Color Gamut
+*/
+
+/* .box {
+	> .class-1 {
+		font-size: 14px;
+	}
+} */
+
+.box > .class-1 {
+	font-size: 14px;
+}
+
+.box > .class-1 > span {
+	font-size: 3em;
+}
+
+.box > .class-1 > span > span {
+	font-size: 1rem;
+}
+
+.box > .class-2 {
+	font-size: 24pt;
+}
+
+.box > .class-3 {
+	font-size: 1vw; /* 1% of viewport width */
+}
+
+.box > .class-4 {
+	font-size: 1vh; /* 1% of viewport height */
+}
+
+.box > .class-5 {
+	font-size: 3vmin; /* 1% of viewport width or height */
+	size: A4 portrait;
+	text-indent: 1.5cm;
+}

@@ -1,0 +1,100 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: #292929;
+	color: #e4e4e4;
+
+	font-size: 55px;
+}
+
+/* 100 */
+/* #page-title {
+	font-size: 99px;
+} */
+
+/* 2 */
+body > h1 {
+	font-size: 55px;
+}
+
+/* 2 */
+body h1 {
+	font-size: 99px;
+}
+
+/* 1 */
+h1 {
+	font-size: 34px;
+}
+
+/* 10 */
+.title {
+	font-size: 13px;
+}
+
+/* 10 */
+.typography {
+	font-size: 22px;
+}
+
+/* 0, 12, 0 */
+/* 120 */
+/* .title.typography.c1.c2.c3.c4.c5.c6.c7.c8.c9.c10 {
+	font-size: 8px;
+} */
+
+/* 0, 1, 0 => 10 */
+[data-title='spec'] {
+	font-size: 199px; /* 0, 1, 0 */
+}
+
+body :has(.typography) {
+	font-size: 99px;
+	color: green;
+}
+
+body:has(.typography) {
+	font-size: 99px;
+	color: blue;
+}
+
+/* 0, 0, 2 */
+h1:has(+ h1) {
+	font-size: 99px;
+	color: red;
+}
+
+/* 0, 0, 2 */
+body > h1 {
+	font-size: 55px; /* 0, 0, 2 */
+	color: aqua; /* 0, 0, 2 */
+}
+
+/* 0, 1, 1 */
+h1:is(.typography) {
+	font-size: 99px;
+	color: rgb(248, 49, 255);
+}
+
+/* 0, 1, 1 */
+h1:not(.typography) {
+	font-size: 99px;
+	color: rgb(255, 255, 0);
+}
+
+/* 0, 1, 1 */
+h1:hover {
+	font-size: 99px;
+	color: rgb(38, 0, 255);
+}
+
+/* 0, 1, 1 */
+h1:active {
+	font-size: 99px;
+	color: rgb(255, 0, 0);
+}
