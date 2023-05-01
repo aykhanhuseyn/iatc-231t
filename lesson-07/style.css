@@ -1,0 +1,137 @@
+html,
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+	/* box-sizing: content-box; */
+}
+
+button {
+	cursor: pointer;
+}
+
+.form-group {
+	margin: 10px 0 20px 30px;
+	padding: 10px 24px 20px 12px;
+	position: relative;
+}
+
+.form-group > label {
+	/* display: block;
+	margin-bottom: 5px; */
+	position: absolute;
+	top: 27px;
+	left: 30px;
+	color: #a9a9a9;
+	padding: 0 8px;
+	background-color: white;
+	transition: all 0.12s ease;
+}
+
+.form-group > input {
+	width: 100%;
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 50px;
+}
+
+.form-group > input:focus + label,
+.form-group > input:valid + label {
+	/* outline: 1px solid #58a1ff; */
+	color: #2c2c2c;
+	top: 0px;
+}
+
+.form-group > input ~ span {
+	display: none;
+}
+
+.form-group > input:invalid {
+	border-color: rgb(221, 49, 49);
+}
+.form-group > input:invalid ~ span {
+	display: block;
+	color: rgb(221, 49, 49);
+}
+
+.form-group > button {
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 50px;
+	background-color: #58a1ff;
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+/* input + label {
+	font-weight: 700;
+	font-size: 24px;
+} */
+
+/* input {
+	border: 5px solid #58a1ff;
+	border-radius: 5px;
+}
+
+input:focus {
+	outline: 5px solid #ff0000;
+} */
+
+div[data-text='navigation elements'] {
+	background-color: #58a1ff;
+	padding: 30px;
+	border: 1px solid #58a1ff;
+	border-radius: 5px;
+	margin: 20px;
+}
+
+/* div[data-text*='igat'] > a {
+	color: #2c2c2c;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 0 10px;
+	display: block;
+	margin-bottom: 8px;
+} */
+
+div[data-text~='elements'] > a {
+	color: #2c2c2c;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 0 10px;
+	display: block;
+	margin-bottom: 8px;
+}
+
+a[href*='.co'] {
+	color: red !important;
+}
+
+a[href^='https'] {
+	color: green !important;
+}
+
+a[href$='.com'] {
+	color: blue !important;
+}
+
+[data-lang|='en'] {
+	background-color: orange !important;
+}
+
+/* a {
+	color: blue;
+}
+
+a {
+	color: red;
+} */
