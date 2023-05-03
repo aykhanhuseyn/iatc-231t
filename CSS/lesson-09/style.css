@@ -1,0 +1,42 @@
+@import url('./fonts/style.css');
+@import url('./variables.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./providing.css');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ffffff;
+	color: #ffffff;
+	font-family: 'Neue Machina', sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.clearfix::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.vertical-line {
+	display: inline-block;
+	height: 41px;
+	width: 1px;
+	background-color: var(--black-80);
+}
+
+.half-blood {
+	height: 20px;
+	position: relative;
+}
+
+.half-blood > .content {
+	position: absolute;
+	top: -105px;
+}

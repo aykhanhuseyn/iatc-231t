@@ -1,0 +1,47 @@
+.providing > .photos > .wrapper {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-image: url('https://images.unsplash.com/photo-1461800919507-79b16743b257?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aHVtYW58ZW58MHx8MHx8&w=1000&q=80');
+	background-position: -200px -140px;
+	position: relative;
+}
+
+.providing > .photos > .wrapper::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: var(--black);
+	top: 200px;
+	left: 200px;
+}
+
+.providing > .photos {
+	position: relative;
+	width: 49%;
+	height: 700px;
+	display: inline-block;
+}
+
+.providing > .photos > .wrapper:nth-child(1) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(52deg);
+}
+.providing > .photos > .wrapper:nth-child(2) {
+	position: absolute;
+	top: 150px;
+	left: 250px;
+	transform: rotate(22deg);
+}
+
+.providing > .content {
+	width: 49%;
+	height: 700px;
+	display: inline-block;
+}

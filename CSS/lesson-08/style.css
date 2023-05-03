@@ -51,6 +51,7 @@ h1 {
 /* 0, 1, 0 => 10 */
 [data-title='spec'] {
 	font-size: 199px; /* 0, 1, 0 */
+	background-color: red;
 }
 
 body :has(.typography) {
