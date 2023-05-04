@@ -40,3 +40,9 @@ button {
 	position: absolute;
 	top: -105px;
 }
+
+body {
+	> main {
+		height: 100vh;
+	}
+}
