@@ -1,0 +1,54 @@
+.header {
+	background-image: url('./images/bg-header-desktop.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 363px;
+	mix-blend-mode: normal;
+	opacity: 0.25;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.hero {
+	margin-top: -150px;
+
+	> img {
+		margin-bottom: 58px;
+	}
+}
+
+.btn-group {
+	gap: 16px;
+}
+
+.feature {
+	margin-right: 300px;
+	display: grid;
+	grid-template-columns: 1fr 350px;
+	gap: 100px;
+
+	> ul {
+		list-style: none;
+		padding: 0;
+
+		> li {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+	}
+}
+
+.devices {
+	height: 600px;
+
+	> img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
