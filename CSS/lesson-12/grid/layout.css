@@ -1,0 +1,31 @@
+.layout {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: minmax(300px, 400px) minmax(700px, 1fr);
+	grid-template-rows: 100px 1fr 100px;
+	grid-template-areas:
+		'aside header header header'
+		'aside main main main'
+		'aside footer footer footer';
+	/* grid-gap: 10px;
+	gap: 10px;
+	row-gap: 10px;
+	column-gap: 50px; */
+}
+
+header {
+	grid-area: header;
+	background-color: blue;
+}
+aside {
+	grid-area: aside;
+	background-color: yellow;
+}
+main {
+	grid-area: main;
+	background-color: red;
+}
+footer {
+	grid-area: footer;
+	background-color: green;
+}
