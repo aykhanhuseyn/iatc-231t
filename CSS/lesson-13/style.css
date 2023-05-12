@@ -1,0 +1,171 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #000;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: #000;
+	color: #fff;
+}
+.btn-secondary {
+	background-color: #fff;
+	color: #000;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* header > nav > ul > li > a:hover {
+	color: red;
+} */
+
+header {
+	display: grid;
+	grid-template-columns: minmax(150px, 200px) minmax(max-content, 1fr) max-content;
+	align-items: center;
+	gap: 20px;
+
+	& .slider {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -110%;
+		width: 100%;
+		filter: blur(5px);
+		z-index: -1;
+		background-color: red;
+		transition: all 0.2s ease-in-out;
+	}
+
+  > input[type='checkbox'] {
+    display: none;
+  }
+
+  > input[type='checkbox']:checked ~ .slider {
+		left: 0;
+	}
+
+	> input[type='checkbox']:checked ~ nav,
+	> input[type='checkbox']:checked ~ .actions {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	> input[type='checkbox']:checked ~ nav > ul {
+		flex-direction: column;
+		gap: 20px;
+
+		> li > a {
+			font-size: 2rem;
+		}
+	}
+	> input[type='checkbox']:checked ~ .actions {
+		top: unset;
+		bottom: 0;
+	}
+
+	.logo {
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	> nav > ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		list-style: none;
+		padding: 0;
+
+		> li > a {
+			text-decoration: none;
+			color: #000;
+			font-weight: 600;
+			font-size: 1rem;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				color: #333;
+			}
+		}
+	}
+
+	> .actions {
+		display: flex;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 996px) {
+	header {
+		grid-template-columns: 150px 1fr max-content;
+		grid-template-columns: max-content 1fr 150px;
+
+		> .logo {
+			grid-column: 3 / 4;
+		}
+
+		> nav {
+			display: none;
+		}
+
+		> .actions {
+			display: none;
+		}
+
+		> .btn {
+			grid-column: 1 / 2;
+			order: -1;
+		}
+	}
+}
+
+@media (min-width: 997px) {
+	header {
+		> .btn {
+			display: none;
+		}
+	}
+}
+
+// Mobile, Tablet, Desktop
+@media screen and (max-width: 500px) {
+	/* header {
+		background-color: red;
+	} */
+}
+
+@media print {
+	header {
+		background-color: red;
+	}
+}
