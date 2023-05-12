@@ -1,0 +1,14 @@
+@use 'variables';
+@use 'functions';
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: variables.$black;
+
+	h1 {
+		font-size: functions.to-rem(55px);
+	}
+}
