@@ -1,0 +1,68 @@
+@use 'sass:math';
+@use 'media';
+@use 'mixins';
+
+.container {
+	max-width: media.$desktop;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include mixins.for-strict-screen(media.$phone) {
+		max-width: 100%;
+	}
+	@include mixins.for-strict-screen(media.$tablet) {
+		max-width: 95%;
+	}
+	@include mixins.for-strict-screen(media.$desktop) {
+		max-width: media.$desktop;
+	}
+	@include mixins.for-strict-screen(media.$large-desktop) {
+		max-width: media.$large-desktop;
+	}
+}
+
+.red {
+	background-color: red;
+}
+.green {
+	background-color: green;
+}
+.blue {
+	background-color: blue;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+
+$col-amount: 12;
+
+@for $i from 0 through $col-amount {
+	.col-#{$i} {
+		width: if($i == 0, 0, math.div(100%, $col-amount) * $i);
+	}
+	.offset-#{$i} {
+		margin-left: if($i == 0, 0, math.div(100%, $col-amount) * $i);
+	}
+
+	@each $name, $value in media.$breakpoints {
+		.col-#{$name}-#{$i} {
+			@include mixins.for-strict-screen($value) {
+				width: if($i == 0, 0, math.div(100%, $col-amount) * $i);
+			}
+		}
+
+		.offset-#{$name}-#{$i} {
+			@include mixins.for-strict-screen($value) {
+				margin-left: if($i == 0, 0, math.div(100%, $col-amount) * $i);
+			}
+		}
+	}
+}

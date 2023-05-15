@@ -1,0 +1,17 @@
+// map of colors
+$colors: (
+	primary: rgb(62, 255, 146),
+	secondary: rgb(47, 73, 47),
+	tertiary: rgb(90, 90, 90),
+	quaternary: rgb(255, 255, 255),
+);
+
+// map of display font sizes
+$display-sizes: (
+	1: 55px,
+	2: 45px,
+	3: 35px,
+);
+
+// list of font families
+$font-families: ('Roboto', 'Helvetica', 'sans-serif');

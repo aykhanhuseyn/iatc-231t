@@ -1,0 +1,49 @@
+@use 'variables';
+@use 'functions';
+@use 'mixins';
+@use 'media';
+@import 'placeholders';
+
+@each $color, $value in variables.$colors {
+	.color-#{$color} {
+		color: $value;
+	}
+}
+
+.display {
+	@extend .color-secondary;
+	font-weight: 700;
+
+	// @include mixins.for-mobile {
+	// 	font-size: functions.get-rem(15px);
+	// }
+
+	// @include mixins.for-screen(734865px) {
+	// 	font-size: functions.get-rem(20px);
+	// }
+
+	@include mixins.for-strict-screen(media.$phone) {
+		font-size: functions.get-rem(20px);
+	}
+}
+
+.text {
+	@extend .color-secondary;
+	@extend %hello-world;
+}
+
+.box {
+	// @include mixins.flex-center;
+	// @include mixins.flex-bottom;
+	@include mixins.flex-top;
+	width: 100px;
+	height: 100px;
+	background-color: rebeccapurple;
+}
+
+@each $index, $size in variables.$display-sizes {
+	.display-#{$index} {
+		@extend .display;
+		font-size: functions.get-rem($size);
+	}
+}

@@ -1,0 +1,61 @@
+@use 'media';
+
+@mixin flex($justify: center, $align: center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin flex-center {
+	@include flex;
+}
+@mixin flex-bottom {
+	@include flex(flex-end, flex-end);
+}
+@mixin flex-top {
+	@include flex(flex-start, flex-start);
+}
+
+@mixin for-mobile {
+	@media screen and (max-width: media.$phone) {
+		@content;
+	}
+}
+@mixin for-tablet {
+	@media (max-width: media.$tablet) {
+		@content;
+	}
+}
+@mixin for-desktop {
+	@media (max-width: media.$desktop) {
+		@content;
+	}
+}
+
+@mixin for-screen($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin for-strict-screen($size) {
+	@if $size == media.$phone {
+		@media screen and (max-width: media.$phone) {
+			@content;
+		}
+	} @else if $size == media.$tablet {
+		@media screen and (max-width: media.$tablet) {
+			@content;
+		}
+	} @else if $size == media.$desktop {
+		@media screen and (min-width: media.$desktop) {
+			@content;
+		}
+	} @else if $size == media.$large-desktop {
+		@media screen and (min-width: media.$large-desktop) {
+			@content;
+		}
+	} @else {
+		@error 'Invalid media size';
+	}
+}
