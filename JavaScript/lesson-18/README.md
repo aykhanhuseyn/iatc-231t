@@ -57,3 +57,25 @@ Stage 1
 Stage 0
 Finished
 Inactive
+
+## Engines
+
+- JavaScriptCore => Safari => macOS, iOS
+
+- SpiderMonkey => Mozilla => Linux, Windows, macOS
+
+- V8 Engine => Chrome => Linux, Windows, macOS => 2015
+
+ActionScript => Adobe
+Adobe Flash Player
+
+2016
+NodeJS
+
+## JS is Interpreted or Compiled?
+
+Interpreted => runs immediately
+
+Compiled => creates executable => execute this file
+
+JIT Compiler => Just In Time Compiler
