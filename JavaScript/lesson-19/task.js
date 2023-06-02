@@ -5,17 +5,23 @@
 // example: [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100]
 // output: hello world
 // example: [83, 97, 108, 97, 109, 32, 65, 122, 101, 114, 98, 97, 121, 99, 97, 110]
+// output: Salam Azerbaycan
 // example: [106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 32, 105, 115, 32, 98, 111, 109, 98, 97]
+// output: javascript is bomba
 
-const asciiCodes = [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100];
-let word = '';
-for (let i = 0; i < asciiCodes.length; i++) {
-	let letter = String.fromCharCode(asciiCodes[i]);
-	word += letter;
-
-	console.log(letter, word);
-}
-console.log(word);
+// const asciiCodes = [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100];
+// let result = '';
+// // i = 0 => 10
+// for (let i = 0; i < asciiCodes.length; i++) {
+// 	// i = 0 => 104
+// 	// h
+// 	let letter = String.fromCharCode(asciiCodes[i]);
+// 	// result = '' + 'h'
+// 	result += letter;
+// 	// console.log(i, letter, result);
+// 	// debugger;
+// }
+// console.log(result);
 
 // 'H'.charCodeAt(0); // 72
 // 2. Write a JavaScript program to convert a string to an array of ASCII codes.
@@ -24,13 +30,51 @@ console.log(word);
 // example: Salam Azerbaycan
 // example: javascript is bomba
 
+// // let word = 'hello world';
+// // let word = 'Salam Azerbaycan';
+// let word = 'javascript is bomba';
+// let result = [];
+// for (let i = 0; i < word.length; i++) {
+// 	let code = word.charCodeAt(i);
+// 	result.push(code);
+// }
+// console.log(word, result);
+
 // 3. Write a JavaScript program to convert a string to an array of characters.
 // example: hello world
 // output: ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
 
+// const str = 'hello world';
+// const result = [];
+// for (let i = 0; i < str.length; i++) {
+// 	let letter = str[i];
+// 	result.push(letter);
+// }
+// console.log(str, result);
+
 // 4. Write a JavaScript program to drop the vowels from a string.
 // example: hello world
 // output: hll wrld
+
+// const str = 'hello world';
+// const vowels = ['a', 'e', 'i', 'o', 'u'];
+// let result = '';
+// // debugger;
+// for (let i = 0; i < str.length; i++) {
+// 	let letter = str[i];
+// 	let isVowel = false;
+// 	for (let j = 0; j < vowels.length; j++) {
+// 		let vowel = vowels[j];
+
+// 		if (letter === vowel) {
+// 			isVowel = true;
+// 		}
+// 	}
+// 	if (!isVowel) {
+// 		result += letter;
+// 	}
+// }
+// console.log({ str, result });
 
 // 5. Write a JavaScript program to check if a string contains only digits.
 // example: 1234567890  // true
