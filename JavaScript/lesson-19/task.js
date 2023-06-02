@@ -12,3 +12,11 @@ console.log(String.fromCharCode(53)); // 5
 // output: [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100]
 // example: Salam Azerbaycan
 // example: javascript is bomba
+
+// 3. Write a JavaScript program to convert a string to an array of characters.
+// example: hello world
+// output: ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
+
+// 4. Write a JavaScript program to drop the vowels from a string.
+// example: hello world
+// output: hll wrld
