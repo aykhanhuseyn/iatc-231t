@@ -64,10 +64,12 @@
 // console.log(0b10110 >>> 1);
 
 // 5. Logical operators
-// &&, ||, !
+// &&, ||, !, ??
 // and => && => short circuit
 // or => ||
 // not => !
+// nullish coalescing operator => ??
+// // ternary operator => ? :
 
 // 6. String operators
 // +, +=
