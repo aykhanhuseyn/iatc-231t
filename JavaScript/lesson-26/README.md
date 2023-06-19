@@ -70,6 +70,29 @@ const funcName = (params) => {
 
 ### higher order functions
 
+```javascript
+function timeFunction(fn) {
+	return function (...args) {
+		console.time('Execution time');
+		const result = fn(...args);
+		console.timeEnd('Execution time');
+		return result;
+	};
+}
+
+// Original function
+function multiply(a, b) {
+	return a * b;
+}
+
+// HOC applied to the multiply function
+const timedMultiply = timeFunction(multiply);
+
+// Using the HOC function
+const result = timedMultiply(5, 7); // Output: Execution time: 0.080ms
+console.log(result); // Output: 35
+```
+
 ## function methods
 
 ### call
