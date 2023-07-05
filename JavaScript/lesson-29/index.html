@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+
+  <style>
+    .dark {
+      background-color: rgb(28, 28, 28);
+      color: rgb(242, 242, 242);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>a heading</h1>
+
+    <a name="aTag" href="https://www.google.com">Google</a>
+    <a name="aTag" class="link" href="https://www.google.com">Google</a>
+    <a name="aTag" class="link" href="https://www.google.com">Google</a>
+
+    <form>
+      <input type="text" name="email" id="email">
+    </form>
+  </main>
+
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      >li {
+        display: inline-block;
+        background-color: red;
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+        width: 300px;
+        height: 400px;
+
+        flex: 1 1 1 300px;
+
+        >img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
+    }
+  </style>
+
+  <ul></ul>
+
+  <div id="root">
+    <h1>Products</h1>
+
+    <h3 id="price"></h3>
+
+    <ul>
+    </ul>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
