@@ -116,3 +116,16 @@ function getData(key) {
 	const data = JSON.parse(JSONstring);
 	return data;
 }
+
+// media prefers color scheme change event
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+prefersDarkScheme.addEventListener('change', (event) => {
+	if (event.matches) {
+		document.body.classList.add('dark');
+		console.log('dark mode');
+	} else {
+		document.body.classList.remove('dark');
+		console.log('light mode');
+	}
+});
