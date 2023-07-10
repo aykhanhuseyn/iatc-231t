@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB APIs</title>
+
+  <style>
+    main {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+    }
+
+    #products {
+      display: flex;
+      flex-wrap: wrap;
+
+      >.product__item {
+        width: 200px;
+        min-height: 200px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        >.product__image {
+          width: 100%;
+          height: 100%;
+          max-height: 200px;
+          object-fit: cover;
+
+          >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        >.product__body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+
+          >.product__title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          >.product__price {
+            font-size: 16px;
+            font-weight: bold;
+            color: red;
+          }
+        }
+      }
+    }
+
+    #cart {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Products</h1>
+
+  <main>
+    <section id="products"></section>
+    <aside id="cart"></aside>
+  </main>
+
+
+
+
+  <script src="script.js"></script>
+  <!-- <script src="storage.js"></script> -->
+
+</body>
+
+</html>

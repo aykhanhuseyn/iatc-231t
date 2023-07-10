@@ -9,10 +9,22 @@
 - Home task: Dictionary
 
 - Geolocation API
-- Canvas API
 - Notification API
-- JavaScript Modules
+- Storage API => localStorage, sessionStorage, cookie
+- Canvas API
+- File Upload & Image preview
+- Home task: link sharing application
+
+- class
+- async, defer & default
+- ES Modules
+- import & export
+- OOP
+- Snake with OOP
+
+- web socket
+- PWA
+- web worker
 
 - Typescript
-
 - Vitest
