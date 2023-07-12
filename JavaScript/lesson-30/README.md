@@ -11,17 +11,17 @@
 - Geolocation API
 - Notification API
 - Storage API => localStorage, sessionStorage, cookie
-- Canvas API
-- File Upload & Image preview
 - Home task: link sharing application
 
-- class
 - async, defer & default
+- class
+- Canvas API
+- File Upload & Image preview
+- OOP
+- Snake game with OOP
+
 - ES Modules
 - import & export
-- OOP
-- Snake with OOP
-
 - web socket
 - PWA
 - web worker
