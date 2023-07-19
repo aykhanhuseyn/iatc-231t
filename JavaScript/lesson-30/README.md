@@ -18,10 +18,18 @@
 - Canvas API
 - File Upload & Image preview
 - OOP
-- Snake game with OOP
+
+- Quiz
+- in calss task: Users API task
+
+- URL
+- URLSearchParams
+- in class task: Products API task
 
 - ES Modules
 - import & export
+- Snake game with OOP
+
 - web socket
 - PWA
 - web worker
