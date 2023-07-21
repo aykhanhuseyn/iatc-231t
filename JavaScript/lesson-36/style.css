@@ -1,0 +1,78 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+#messaging {
+	width: 100%;
+	height: 100dvh;
+	padding: 10px;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	display: grid;
+	grid-template-rows: 30px 1fr 50px;
+
+	& > h1 {
+		margin: 0;
+		padding: 0;
+		font-size: 24px;
+	}
+
+	#messages {
+		overflow-y: scroll;
+
+		& > div {
+			margin: 10px 0;
+			padding: 10px;
+			border-radius: 5px;
+			background-color: #179aed;
+			color: #fff;
+			display: block;
+			max-width: 80%;
+			text-align: left;
+
+			&[data-username='admin'] {
+				background-color: #ccc;
+				color: #000;
+				text-align: right;
+				margin-left: auto;
+			}
+		}
+	}
+
+	#message-form {
+		width: 100%;
+		background-color: #fff;
+		border-radius: 5px;
+		border: none;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		position: relative;
+
+		& > textarea {
+			width: 100%;
+			height: 100%;
+			padding: 12px 20px;
+			border: 1px solid #ccc;
+		}
+
+		& > button {
+			background-color: #179aed;
+			padding: 12px 20px;
+			color: white;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			border: 1px solid #179aed;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+}

@@ -31,6 +31,7 @@
 - Snake game with OOP
 
 - web socket
+
 - PWA
 - web worker
 

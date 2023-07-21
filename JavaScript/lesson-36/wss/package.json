@@ -1,0 +1,19 @@
+{
+	"name": "wss",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"ws": "^8.13.0"
+	},
+	"devDependencies": {
+		"@faker-js/faker": "^8.0.2"
+	}
+}
