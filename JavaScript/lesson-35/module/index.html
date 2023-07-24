@@ -5,10 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ES Module</title>
+  <!-- <script defer src="defer.js"></script> -->
 </head>
+
+<!-- sync => no keyword, stops html, reads js, continues to html -->
+
+<!-- async => async keyword, runs when finished loading js file -->
+
+<!-- defer => defer keyword, waits for html to finish, reads js at the end -->
 
 <body>
   <h1>ES Module</h1>
+
+  <!-- <script src="normal.js"></script> -->
+  <!-- <script async src="normal.js"></script> -->
 
   <!-- <script src="normal1.js"></script>
   <script src="normal2.js"></script> -->
@@ -17,7 +27,7 @@
   <!-- <script src="module2.js" type="module"></script> -->
 
   <!-- default deferred -->
-  <script src="module.mjs" type="module"></script>
+  <!-- <script src="module.mjs" type="module"></script> -->
 
   <!-- we have to defer the script, in order to make it work -->
   <!-- <script src="normal.js" defer></script> -->

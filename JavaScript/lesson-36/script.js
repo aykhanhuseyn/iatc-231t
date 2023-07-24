@@ -27,6 +27,8 @@ ws.addEventListener('close', () => {
 });
 
 ws.addEventListener('message', (event) => {
+	// event.data type is string | Blob | ArrayBuffer
+
 	const message = JSON.parse(event.data);
 
 	Swal.fire({
