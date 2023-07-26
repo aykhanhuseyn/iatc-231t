@@ -1,0 +1,28 @@
+@import './style.css';
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ccc;
+	margin: 0;
+	padding: 0;
+
+	& > #app {
+		background-color: aqua;
+		@include flex(column, center, center);
+		height: 100dvh;
+
+		h1 {
+			color: red;
+		}
+	}
+}
