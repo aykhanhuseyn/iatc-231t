@@ -35,5 +35,12 @@
 - PWA
 - web worker
 
+- Webpack
+
 - Typescript
+
+- Set, Map, WeakSet, WeakMap
+- Proxy
+- Reflection
+- RegExp
 - Vitest

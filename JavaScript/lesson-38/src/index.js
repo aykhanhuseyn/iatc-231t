@@ -18,6 +18,7 @@ greet('John');
 // 	};
 // }
 
+// [tapl], [tyupl]
 const tuple = #[1, 'hello', true];
 
 console.log(tuple);

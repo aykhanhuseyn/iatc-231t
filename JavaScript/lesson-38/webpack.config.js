@@ -1,7 +1,7 @@
 // import path from 'path';
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-// const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 // export default {}
 // CommonJS
@@ -63,12 +63,13 @@ module.exports = {
 			title: 'Bye, Webpack!',
 			filename: 'bye.html',
 		}),
-		// new ESLintPlugin({
-		// 	extensions: ['js', 'mjs', 'cjs'],
-		// 	exclude: 'node_modules',
-		// 	fix: true,
-		// 	emitWarning: true,
-		// 	cwd: path.resolve(__dirname, './src'),
-		// }),
+		new ESLintPlugin({
+			exclude: 'node_modules',
+			fix: true,
+			emitWarning: true,
+			context: path.resolve(__dirname, 'src'),
+			lintDirtyModulesOnly: true,
+			useEslintrc: true,
+		}),
 	],
 };
