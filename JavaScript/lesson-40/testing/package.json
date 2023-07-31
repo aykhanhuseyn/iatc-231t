@@ -1,0 +1,14 @@
+{
+	"name": "testing",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@vitest/ui": "^0.33.0",
+		"vite": "^4.4.7",
+		"vitest": "^0.33.0"
+	},
+	"scripts": {
+		"test": "vitest --ui"
+	}
+}
