@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy</title>
+</head>
+
+<body>
+  <h1>Proxy</h1>
+
+  <script src="html.js"></script>
+  <script defer src="tooltip.js"></script>
+  <script defer src="dropdown.js"></script>
+
+  <h1 data-tooltip="salam">salam</h1>
+
+  <button data-tooltip="btn">click me</button>
+
+  <hr />
+
+  <style>
+    [data-dropdown-name] {
+      position: relative;
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 4px 6px;
+      cursor: pointer;
+      user-select: none;
+
+      .input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 120px;
+        min-height: 40px;
+        cursor: inherit;
+
+        [data-placeholder] {
+          color: #ccc;
+          cursor: inherit;
+        }
+      }
+
+      [data-options] {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-top: none;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: none;
+        background-color: #fff;
+
+        li {
+          padding: 8px 12px;
+          cursor: pointer;
+          user-select: none;
+          background-color: #ccc;
+
+          border-bottom: 1px solid #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover {
+            background-color: #9f9d9d;
+          }
+
+          &.selected {
+            background-color: #303030;
+            color: #fff;
+          }
+
+          &.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+        }
+
+        /* & .open {
+          display: block;
+        } */
+      }
+
+      [data-options].open {
+        display: block;
+      }
+    }
+  </style>
+
+  <div id="dropdown" data-dropdown-name="car">
+    <div class="input">
+      <span data-value="">placeholder</span>
+      <span>▼</span>
+    </div>
+    <ul data-options>
+      <li data-value="bmw"><b>bmw</b></li>
+      <li class="disabled" data-value="benz">mecedes benz</li>
+      <li data-value="pride">pride</li>
+    </ul>
+  </div>
+
+  <hr />
+
+  <select name="car-select">
+    <option selected value="1">1</option>
+    <option disabled value="2">2</option>
+    <option value="3">3</option>
+  </select>
+
+  <button>Click</button>
+
+  <modal-box data-tooltip="this is modal" status="closed" width="300px" height="300px">salam</modal-box>
+  <!-- <script src="proxy.js"></script> -->
+</body>
+
+</html>
