@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+.button {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin: 0.5rem 0;
+	border: 1px solid var(--text-color);
+	border-radius: 0.25rem;
+	background-color: var(--background-color) !important;
+	color: var(--text-color);
+	text-decoration: none;
+	text-align: center;
+}
