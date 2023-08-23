@@ -1,0 +1,37 @@
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 42px;
+	cursor: pointer;
+}
+
+.btn__primary {
+	background: #1d9bf0;
+	border: none;
+	color: #ffffff;
+}
+.btn__primary:hover {
+	background: #1d94f9;
+}
+
+.btn__secondary {
+	background: transparent;
+	border: 1px solid rgba(228, 234, 237, 76%);
+	color: #000000;
+}
+.btn__secondary:hover {
+	background: #e4eaed;
+}
+
+.btn__block {
+	width: 100%;
+	display: flex;
+}
+
+.btn__inline {
+	display: inline-flex;
+}

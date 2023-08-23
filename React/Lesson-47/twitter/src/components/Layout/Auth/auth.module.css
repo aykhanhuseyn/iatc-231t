@@ -1,0 +1,35 @@
+.auth {
+	display: grid;
+	grid-template-columns: 6fr minmax(300px, 4fr);
+	grid-template-rows: 1fr 56px;
+	height: 100vh;
+	height: 100dvh;
+}
+
+.auth__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.auth__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+}
+
+.auth__footer {
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	> a {
+		text-decoration: none;
+		color: inherit;
+	}
+}

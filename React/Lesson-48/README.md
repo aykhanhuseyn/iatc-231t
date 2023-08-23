@@ -1,9 +1,9 @@
-# State
+# React Router Part 2
 
-## Context
+## action
 
-### Functional
+## loader
 
-### Class
+## code splitting
 
-## useReducer
+## lazy loading
