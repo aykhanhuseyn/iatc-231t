@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React + TS</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="div1" style="padding: 10px; background: red;">
+    <div id="div2" style="padding: 10px; background: green;">
+      <div id="div3" style="padding: 10px; background: blue;">
+        <button id="trgt" style="padding: 10px; background: orange;">
+          target
+        </button>
+      </div>
+    </div>
+  </div>
+  <script defer>
+    const div1 = document.getElementById('div1');
+    const div2 = document.getElementById('div2');
+    const div3 = document.getElementById('div3');
+    const trgt = document.getElementById('trgt');
+    div1.addEventListener('click', (e) => {
+      console.log('div1', e.target, e.currentTarget);
+      // e.preventDefault();
+    }, {
+      capture: false,
+      passive: true,
+      once: true,
+    });
+    div2.addEventListener('click', (e) => {
+      console.log('div2', e.target, e.currentTarget);
+      // e.preventDefault();
+    }, {
+      capture: false,
+      passive: true,
+      once: tru
+    });
+    div3.addEventListener('click', (e) => {
+      console.log('div3', e.target, e.currentTarget);
+      // e.preventDefault();
+    }, {
+      capture: false,
+      passive: true,
+      once: tru
+    });
+    trgt.addEventListener('click', (e) => {
+      console.log('trgt', e.target, e.currentTarget);
+      // e.preventDefault();
+    }, {
+      capture: false,
+      passive: true,
+      once: tru
+    });
+
+  </script>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
