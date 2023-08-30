@@ -23,7 +23,7 @@ export const CreateTodo: FC<CreateTodoProps> = ({
 	defaultValues = initialFormData,
 }) => {
 	const [formData, setFormData] = useState(defaultValues);
-	const { editTodo, createTodo } = useTodoContext();
+	const {} = useTodoContext();
 
 	const formSubmitHandler = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();

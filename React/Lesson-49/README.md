@@ -3,7 +3,3 @@
 ## Context
 
 ### Functional
-
-### Class
-
-## useReducer
