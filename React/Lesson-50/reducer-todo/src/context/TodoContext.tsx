@@ -3,9 +3,11 @@ import {
 	createContext,
 	useContext,
 	useReducer,
+	useEffect,
 	type Dispatch,
 	type FC,
 	type PropsWithChildren,
+	// useCallback,
 } from 'react';
 import { nanoid } from 'nanoid';
 import type { Todo } from '../models';
@@ -20,6 +22,7 @@ interface TodoContextProps {
 
 const TodoContext = createContext<TodoContextProps>({} as TodoContextProps);
 
+// region Action
 type Action = {
 	type: ActionType.CREATE;
 	payload: Omit<Todo, 'id'>;
@@ -35,6 +38,7 @@ type Action = {
 } | {
 	type: ActionType.VIEW_ALL,
 }
+// endregion
 
 export enum ActionType {
 	CREATE,
@@ -69,11 +73,17 @@ function reducer(state: Todo[], action: Action) {
 	}
 }
 
+const localData = JSON.parse(localStorage.getItem('todos') ?? '[]') as Todo[];
+
 export const TodoProvider: FC<PropsWithChildren> = ({ children }) => {
-	const [todos, dispatch] = useReducer(reducer, []);
+	const [todos, dispatch] = useReducer(reducer, localData);
+
+	useEffect(() => {
+		localStorage.setItem('todos', JSON.stringify(todos));
+	}, [todos]);
 
 	// const createTodo: CreateTodoFn = useCallback((data) => {
-	// 	setTodos((previousTodos) => [...previousTodos, { ...data, id: nanoid() }]);
+	// 	dispatch({ type: ActionType.CREATE, payload: data })
 	// }, []);
 
 	// const editTodo: EditTodoFn = useCallback((data) => {
