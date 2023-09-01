@@ -1,0 +1,12 @@
+{
+	"greet": "welcome",
+	"date": "today is - {{date}}",
+	"intlNumber": "Some {{val, number}}",
+	"intlNumberWithOptions": "Some {{val, number(minimumFractionDigits: 2)}}",
+	"apple_one": "apple",
+	"apple_other": "apples",
+	"auth": {
+		"login": "login",
+		"register": "register"
+	}
+}

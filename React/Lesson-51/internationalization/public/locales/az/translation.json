@@ -1,0 +1,13 @@
+{
+	"greet": "xoş gəlmisiniz",
+	"date": "{{date}} - bugünkü tarix",
+	"intlNumber": "Some {{val, number}}",
+	"intlNumberWithOptions": "Some {{val, number(minimumFractionDigits: 2)}}",
+	"apple_one": "alma",
+	"apple_other": "almalar",
+	"apple": "alma",
+	"auth": {
+		"login": "<b>giriş</b>",
+		"register": "qeydiyyat"
+	}
+}
