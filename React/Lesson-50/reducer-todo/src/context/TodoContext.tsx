@@ -15,29 +15,36 @@ import type { Todo } from '../models';
 // type CreateTodoFn = (data: Omit<Todo, 'id'>) => void;
 // type EditTodoFn = (data: Todo) => void;
 
-interface TodoContextProps {
+export interface TodoContextProps {
 	todos: Todo[];
 	dispatch: Dispatch<Action>;
 }
 
-const TodoContext = createContext<TodoContextProps>({} as TodoContextProps);
+export const TodoContext = createContext<TodoContextProps>(
+	{} as TodoContextProps,
+);
 
 // region Action
-type Action = {
-	type: ActionType.CREATE;
-	payload: Omit<Todo, 'id'>;
-} | {
-	type: ActionType.EDIT;
-	payload: Todo;
-} | {
-	type: ActionType.DELETE;
-	payload: Todo['id'];
-} | {
-	type: ActionType.VIEW,
-	payload: Todo['id'];
-} | {
-	type: ActionType.VIEW_ALL,
-}
+type Action =
+	| {
+			type: ActionType.CREATE;
+			payload: Omit<Todo, 'id'>;
+	  }
+	| {
+			type: ActionType.EDIT;
+			payload: Todo;
+	  }
+	| {
+			type: ActionType.DELETE;
+			payload: Todo['id'];
+	  }
+	| {
+			type: ActionType.VIEW;
+			payload: Todo['id'];
+	  }
+	| {
+			type: ActionType.VIEW_ALL;
+	  };
 // endregion
 
 export enum ActionType {
@@ -61,7 +68,11 @@ function reducer(state: Todo[], action: Action) {
 			];
 		case ActionType.EDIT:
 			editingIndex = state.findIndex(({ id }) => id === action.payload.id);
-			return [...state.slice(0, editingIndex), action.payload, ...state.slice(editingIndex + 1)]
+			return [
+				...state.slice(0, editingIndex),
+				action.payload,
+				...state.slice(editingIndex + 1),
+			];
 		case ActionType.DELETE:
 			return state.filter(({ id }) => id !== action.payload);
 		case ActionType.VIEW:
